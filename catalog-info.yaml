@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test111
+  title: test111
+  annotations:
+    janus-idp.io/tekton: test111
+    tektonci/build-namespace: default
+    github.com/project-slug: jem2305/test111
+    sonarqube.org/project-key: jem2305_test111
+    backstage.io/kubernetes-id: test111
+    argocd/app-name: test111
+    prometheus.io/rule: container_memory_usage_bytes{pod=~"test111-.*"}|pod,rate(container_cpu_usage_seconds_total{pod=~"test111-.*"}[5m])|pod
+  tags:
+    - spring-boot
+    - java
+    - maven
+    - tekton
+    - argocd
+    - renovate
+    - sonarqube
+spec:
+  type: service
+  owner: piomin
+  lifecycle: experimental
